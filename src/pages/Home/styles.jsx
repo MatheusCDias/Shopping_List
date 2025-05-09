@@ -81,8 +81,6 @@ export const AddButton = styled.button`
   cursor: pointer;
   user-select: none;
   background: linear-gradient(315deg, #2d9963 0%, #50cc71 100%);
-  color: #FFF;
-  font-size: 32px;
   will-change: transform;
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 
@@ -91,6 +89,19 @@ export const AddButton = styled.button`
     filter: drop-shadow(2px 8px 16px rgba(0, 0, 0, 0.25));
   }
 
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #FFF;
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  &:hover span {
+    transform: scale(1.05);
+  }
 `;
 
 export const ProductContainer = styled.div`
@@ -145,10 +156,22 @@ export const Product = styled.div`
     color: #444;
     font-size: 24px;
     user-select: none;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      color: #444;
+      transition: color 0.5s ease-in-out;
+    }
 
     &:hover {
       background-color: #444;
+    }
+
+    &:hover span {
       color: #fff;
     }
   }

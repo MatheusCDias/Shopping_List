@@ -7,8 +7,7 @@ import {
   ProductContainer,
   Product,
 } from "./styles";
-import { FaRegTrashAlt } from "react-icons/fa";
-import { IoIosAdd } from "react-icons/io";
+import 'material-symbols';
 
 // React Hooks
 // useRef
@@ -49,7 +48,7 @@ function Home() {
           onKeyDown={handleKeyDown}
         />
         <AddButton onClick={buttonClick}>
-          <IoIosAdd />
+          <span class="material-symbols-outlined">add</span>
         </AddButton>
       </InputContainer>
       <ProductContainer>
@@ -57,7 +56,7 @@ function Home() {
           <Product key={products.id}>
             <p>{products.name}</p>
             <button onClick={() => deleteProduct(products.id)}>
-              <FaRegTrashAlt />
+              <span class="material-symbols-outlined">delete</span>
             </button>
           </Product>
         ))}
