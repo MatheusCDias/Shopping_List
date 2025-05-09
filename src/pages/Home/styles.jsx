@@ -121,6 +121,7 @@ export const Product = styled.div`
   align-items: center;
   width: 25.2rem;
   height: 4.8rem;
+  overflow: hidden;
   background-color: #eee;
   border-radius: 0.8rem;
   transition: background-color 0.5s ease-in-out;
@@ -133,13 +134,13 @@ export const Product = styled.div`
     border-radius: 0.8rem;
     padding: 0.8rem;
     background-color: #eee;
-
     color: #444;
-    font-family: Roboto;
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   button {
